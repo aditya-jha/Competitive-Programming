@@ -42,9 +42,9 @@ int main() {
     }    
     
     for(int i=0;i<1000001;i++) {
-        if(a[i]) {
+        //if(a[i]) {
             for(int j=0;j<a[i];j++) print_d(i);//cout<<a[j]<<'\n';
-        }    
+        //}    
     }    
     
     return 0;
