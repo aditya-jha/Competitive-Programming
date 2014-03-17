@@ -1,0 +1,5 @@
+Used wolframalpha to solve this.
+
+Function name was NumberoFParitions[n]
+
+
