@@ -18,6 +18,20 @@ int scan_d() {
 
 	return ret;
 }
+void print_d(int n) {
+	int i=10;
+	char output_buffer[11];output_buffer[10]='\n';
+	
+	do {
+		output_buffer[--i]=(n%10)+'0';
+		n/=10;
+	} while(n);
+	
+	do {
+		putchar_unlocked(output_buffer[i]);
+	} while(++i<11);
+}
+
 
 void print_lld(lld n) {
 	int i=21;
