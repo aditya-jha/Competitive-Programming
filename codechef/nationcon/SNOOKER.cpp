@@ -1,7 +1,7 @@
 #include<iostream>
-#include<cstdio>
 #include<cmath>
-
+#include<cstdio>
+#include<cstdlib>
 using namespace std;
 
 int main() {
@@ -9,30 +9,29 @@ int main() {
     
     int k;
     float x;
-    int m,n,l,r,u,d;
     
-    cin>>k>>x;
+    cin>>k;
+    cin>>x;
     
     while(k--) {
+        int m,n,l,r,u,d;
+        
         cin>>m>>n>>l>>r>>u>>d;
-        int ans = 0;
-        int q = x/(n*1.41);
-        //cout<<q<<endl;
-        if(q%2 == 0) {
-            ans = ((l+r)*q)/2;
-        }    
-        else {
-            ans = ((q-1)/2)*l + ((q+1)/2)*r;
-        }    
-        //cout<<ans<<endl;
-        int w = x/(m*1.41);
-        if(w%2==0) {
-            ans += ((u+d)*w)/2;
-        }    
-        else {
-            ans += ((w-1)*d)/2 + ((w+1)*u)/2;
-        }    
+        
+        int ans=0;
+        
+        float z = floor(x/(1.41*n));
+        ans += l*(floor(0.5*z));
+        
+        ans += r*ceil(0.5*z);
+        
+        z = floor(x/(1.41*m));
+        ans += d*floor(0.5*z);
+        
+        ans += u*ceil(0.5*z);
+        
         cout<<ans<<endl;
     }    
+    
     return 0;
 }    

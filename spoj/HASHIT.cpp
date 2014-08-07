@@ -59,8 +59,8 @@ int main() {
 				for(int j=0;j<20;j++) {
 					val = (h + j*j + 23*j)%101;
 					if(look[val] == -1) break;
-                    			else if(look[val]==0) continue;
-                    			else if(strcmp(table[i],table[look[val]]) == 0) { con--; look[val]=0; break; }
+                    else if(look[val]==0) continue;
+                    else if(strcmp(table[i],table[look[val]]) == 0) { con--; look[val]=0; break; }
 				}
 			}
 		}
