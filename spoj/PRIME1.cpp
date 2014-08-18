@@ -1,7 +1,7 @@
 /*
 Aditya Jha
 Problem: to print prime numbers between given numbers
-Technique: Sieve of Erastothenes and alos segmented sieve
+Technique: Sieve of Erastothenes and also segmented sieve
 */
 #include<iostream>
 #include<cstdio>
