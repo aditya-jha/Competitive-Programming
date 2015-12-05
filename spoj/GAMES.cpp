@@ -18,6 +18,7 @@ int main() {
         }
         else {
             int val = 0;
+            int max = (int)pow(10.0,s.length()-dot-1);
             for(int i=s.length()-1;i>dot;i--) {
                 val = val*10 + s[i] - '0';
             }
