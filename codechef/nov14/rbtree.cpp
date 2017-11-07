@@ -52,13 +52,6 @@ int colorNodesFromNodeToParent(int rootColor, int colorToFind, int size, int sta
     return count;
 }
 
-void print(vector<int> v) {
-    for(int i=0; i<v.size(); i++) {
-        cout<<v[i]<<", ";
-    }
-    cout<<endl;
-}
-
 int main() {
     int t, x, y, find;
     string s;
@@ -79,11 +72,7 @@ int main() {
             reverse(routeX.begin(), routeX.end());
             reverse(routeY.begin(), routeY.end());
 
-//            print(routeX);
-//            print(routeY);
-
             pair<int, int> parent = lowestCommonParent(routeX, routeY);
-//            cout<<"parent: "<<parent.first<<", "<<parent.second<<endl;
 
             if (s == "Qb") {
                 find = 0;
@@ -98,7 +87,6 @@ int main() {
             }
 
             int parentColor = (parent.second % 2 == 0 ? rootColor : (rootColor + 1) % 2) == find;
-//            cout<<"countX: "<<countX<<", countY: "<<countY<<", parent: "<<parentColor<<endl;
             cout << countX + countY + parentColor << endl;
         }
 
